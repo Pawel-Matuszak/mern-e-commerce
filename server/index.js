@@ -1,6 +1,8 @@
 import 'dotenv/config'
 import express from "express"
 import mongoose from "mongoose"
+import productsRoutes from "./routes/products.js"
+import bodyParser from 'body-parser'
 
 const app = express()
 const port = process.env.PORT || 5000;
@@ -16,11 +18,10 @@ const main = async () => {
 }
 
 main().catch(err => console.error(err));
+app.use(bodyParser.json())
+
 
 //Routes
-
-app.get('/home', (req, res) => {
-  res.json({msg: "success"})
-})
+app.use("/products", productsRoutes);
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))

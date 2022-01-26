@@ -5,20 +5,22 @@ import addItem from "./actions/itemActions"
 
 const App = () => {
 
-  const items = useSelector((state)=>state.items);
-  const dispatch = useDispatch()
-  console.log(items);
 
-  useEffect(()=>{
-    // axios.get("/home").then((res)=>{
-    //   console.log(res);
-    // })
+  const addToDb = ()=>{
+    axios.post("/products", {
+      name: "berd hoodie",
+      price: 12999,
+      url: "./res/berd-hoodie"
+    }).then((res)=>{
+      console.log(res);
+    })
+    // axios.delete("/products/61f14cbfb5a617b27b2e8b6c")
+  }
 
-    dispatch(addItem({name: "qwe", url: "./ddd.png"}))
-  },[])
 
-
-  return <div>HelloWorld</div>;
+  return <div>HelloWorld
+    <button onClick={addToDb}>Add</button>
+  </div>;
 };
 
 export default App;
