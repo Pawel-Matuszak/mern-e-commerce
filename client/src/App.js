@@ -8,16 +8,15 @@ import Catalog from './components/Catalog';
 const App = () => {
 
   
-  const addToDb = ()=>{
-    axios.post("/products", {
-      name: "berd hoodie",
-      price: 12999,
-      url: "./res/berd-hoodie"
-    }).then((res)=>{
-      console.log(res);
-    })
-    // axios.delete("/products/61f14cbfb5a617b27b2e8b6c")
-  }
+  // const addToDb = ()=>{
+  //   axios.post("/products", {
+  //     name: "berd hoodie",
+  //     price: 12999,
+  //     url: "./res/berd-hoodie"
+  //   }).then((res)=>{
+  //     console.log(res);
+  //   })
+  // }
 
 
   return (

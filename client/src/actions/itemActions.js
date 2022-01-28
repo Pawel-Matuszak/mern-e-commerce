@@ -1,12 +1,19 @@
-export const addItem = (item) =>{
-  return{
-    type: "ADD_ITEM",
-    payload: item
-  }
+import axios from "axios"
+
+export const addItem = ({name, price, url}) => dispatch => {
+  axios.post("/products", {name, price, url}).then((res)=>{
+    dispatch({
+      type: "ADD_ITEM",
+      payload: res.data
+    })
+  })
 }
 
-export const getItems = () => {
-  return{
-    type: "GET_ITEMS"
-  }
+export const getItems = () => dispatch => {
+  axios.get("/products").then((res)=>{
+    dispatch({
+      type: "GET_ITEMS",
+      payload: res.data
+    })
+  })
 }
