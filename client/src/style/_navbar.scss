@@ -1,0 +1,25 @@
+.navbar{
+  @extend %box-shadow;
+  
+  display: flex;
+  justify-content: space-evenly;
+  height: 60px;
+  font-weight: 400;
+  line-height: 65px;
+  
+  text-transform: uppercase;
+  
+  &-list{
+    list-style-type: none;
+    display: flex;
+    
+    li{
+      @extend %m-0-50;
+    }
+  }
+
+  .cart{
+    justify-self: flex-end;
+    @extend %m-0-50;
+  }
+}

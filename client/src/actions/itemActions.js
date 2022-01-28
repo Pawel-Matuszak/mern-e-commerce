@@ -1,8 +1,12 @@
-const addItem = (item) =>{
+export const addItem = (item) =>{
   return{
     type: "ADD_ITEM",
     payload: item
   }
 }
 
-export default addItem
+export const getItems = () => {
+  return{
+    type: "GET_ITEMS"
+  }
+}

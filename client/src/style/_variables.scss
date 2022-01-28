@@ -1,1 +1,12 @@
-$red: rgb(41, 17, 87);
+$bg-color: rgb(228, 227, 230);
+$font-color: rgb(0, 0, 0);
+$default-font-size: 1.2rem;
+$default-font: "Montserrat";
+
+%m-0-50{
+  margin: 0 50px;
+}
+
+%box-shadow{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}

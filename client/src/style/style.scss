@@ -1,4 +1,5 @@
 @import "_variables.scss";
+@import "_navbar.scss";
 
 *{
   box-sizing: border-box;
@@ -7,6 +8,8 @@
 }
 
 body{
-  color: #fff;
-  background-color: $red;
+  color: $font-color;
+  font-size: $default-font-size;
+  font-family: $default-font;
+  background-color: $bg-color;
 }

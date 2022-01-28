@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import axios from "axios";
 import { useDispatch, useSelector } from 'react-redux';
-import addItem from "./actions/itemActions"
+import {addItem} from "./actions/itemActions"
+import Navbar from './components/Navbar';
+import Catalog from './components/Catalog';
 
 const App = () => {
 
-
+  
   const addToDb = ()=>{
     axios.post("/products", {
       name: "berd hoodie",
@@ -18,9 +20,12 @@ const App = () => {
   }
 
 
-  return <div>HelloWorld
-    <button onClick={addToDb}>Add</button>
-  </div>;
+  return (
+    <div className='container'>
+      <Navbar/>
+      <Catalog/>
+    </div>
+  )
 };
 
 export default App;
