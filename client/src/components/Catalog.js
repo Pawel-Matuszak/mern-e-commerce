@@ -5,20 +5,22 @@ import { addItem, getItems } from '../actions/itemActions';
 
 const ProductsList = () => {
   const dispatch = useDispatch();
-  const items = useSelector((state)=>state.items)
+  const items = useSelector((state) => state.items)
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(getItems())
-  },[]);
+  }, []);
 
   return (
     <div className='catalog'>
-      {items.map(item => (
-        <Product key={item._id} itemDetails={item}/>
-      ))}
+      <div className="catalog-content">
+        {items.map(item => (
+          <Product key={item._id} itemDetails={item} />
+        ))}
+      </div>
 
-      <button onClick={()=>dispatch(addItem({name: "berd-shoes", price: 999, url: "shoe-berd"}))}>dodaj</button>
-      
+      {/* <button onClick={()=>dispatch(addItem({name: "berd-shoes", price: 999, url: "shoe-berd"}))}>dodaj</button> */}
+
     </div>
   )
 };

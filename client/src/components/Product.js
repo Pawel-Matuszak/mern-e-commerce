@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({itemDetails}) => {
+const Product = ({key, itemDetails}) => {
   return (
     <div className='product'>
       <img src={`${process.env.PUBLIC_URL}/res/${itemDetails.url}.jpg`}alt={itemDetails.url} />

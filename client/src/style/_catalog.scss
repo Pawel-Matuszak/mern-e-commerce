@@ -1,0 +1,11 @@
+.catalog{
+
+  &-content{
+    display: grid;
+    width: 80vw;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: baseline;
+    justify-items: center;
+  }
+}
