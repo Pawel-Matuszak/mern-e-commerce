@@ -20,4 +20,13 @@
   &-price{
     font-weight: 400;
   }
+
+  @media screen and (max-width: $tablet-width) {
+    max-height: 300px;
+    max-width: 180px;
+
+    img{
+      height: 200px;
+    }
+  }
 }

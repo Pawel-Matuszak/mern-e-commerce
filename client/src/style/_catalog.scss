@@ -2,10 +2,19 @@
 
   &-content{
     display: grid;
-    width: 80vw;
+    max-width: 1400px;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
     align-items: baseline;
     justify-items: center;
+
+    @media screen and (max-width: $laptop-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    @media screen and (max-width: $mobile-width) {
+      grid-template-columns: 1fr;
+    }
   }
 }
