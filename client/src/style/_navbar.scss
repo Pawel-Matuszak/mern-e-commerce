@@ -1,23 +1,66 @@
 .navbar{
   @extend %box-shadow;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 77px;
-  font-weight: 400;
-  padding:  0 5vw;
   
+  &-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+    max-width: 1500px;
+    font-weight: 400;
+    padding:  0 5vw;
+    margin: auto;
+  }
+
+  &-wrap .navIcon:hover{
+    cursor: pointer;
+  }
+
   .navIcon svg{
     width: 30px;
     height: 30px;
   }
 
   &-dropdown{
-    background: rgb(151, 151, 151);
-  }
-
-  .title{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 300px;
+    height: 100vh;
+    padding: 30px;
+    background: rgb(255, 255, 255);
     
+    .dropdown-item{
+      display: flex;
+      padding: 20px 0;
+      border-bottom: 1px solid rgb(235, 235, 235);
+      
+      img{
+        width: 50%;
+      }
+    }
+
+    .dropdown-item:nth-child(2){
+      border-top: 1px solid rgb(235, 235, 235);
+    }
+
+    .dropdown-exit{
+      align-self: flex-end;
+      padding: 30px 20px;
+      margin-bottom: 10px;
+      border: none;
+
+      svg{
+        width: 35px;
+      }
+    }
+
+    .dropdown-exit:active{
+      cursor: pointer;
+      background: rgb(235, 235, 235);
+    }
   }
 
   .cart img{
