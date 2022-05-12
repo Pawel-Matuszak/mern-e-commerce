@@ -1,24 +1,27 @@
 .navbar{
   @extend %box-shadow;
-  
   display: flex;
-  justify-content: space-evenly;
-  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  height: 77px;
   font-weight: 400;
-  line-height: 65px;
-  text-transform: uppercase;
+  padding:  0 5vw;
   
-  &-list{
-    list-style-type: none;
-    display: flex;
-    
-    li{
-      @extend %m-0-50;
-    }
+  .navIcon svg{
+    width: 30px;
+    height: 30px;
   }
 
-  .cart{
-    justify-self: flex-end;
-    @extend %m-0-50;
+  &-dropdown{
+    background: rgb(151, 151, 151);
+  }
+
+  .title{
+
+  }
+
+  .cart img{
+    width: 73px;
+    height: 45px;
   }
 }
