@@ -1,20 +1,30 @@
 import React, { useState } from 'react';
 import {ReactComponent as SVGdropdown} from "../images/svgexport-2.svg";
 import CartImg from "../images/checkout_small.webp";
+import TitleImg from "../images/black_logo_130x.webp";
 
 const Navbar = () => {
   return (
     <nav className='navbar'>
       <NavDropdown icon={<SVGdropdown/>}>
-        <NavItem>1</NavItem>
-        <NavItem>2</NavItem>
+        <NavItem className="dropdown-item">1</NavItem >
+        <NavItem className="dropdown-item">2</NavItem >
       </NavDropdown>
-      <div className="title">berd</div>
-      <div className="cart"><img src={CartImg} alt={CartImg}/></div>
+      <NavItem className="title" src={TitleImg}/>
+      <NavItem className="cart" src={CartImg}/>
     </nav>
   )
 };
 
+const NavItem = (props) => {
+  return (
+    <li className={props.className}>
+      <a href="">{props.children}
+        <img src={props.src} alt={props.src} />      
+      </a>
+    </li>
+  )
+}
 const NavDropdown = (props) => {
   const [open, setOpen] = useState(false);
 
@@ -25,16 +35,6 @@ const NavDropdown = (props) => {
         {open && props.children}
       </ul>
     </div>
-  )
-}
-
-const NavItem = (props) => {
-  return (
-    <li className="dropdown-item">
-      <a href="">{props.children}
-        <img src={props.src} alt={props.src} />      
-      </a>
-    </li>
   )
 }
 
