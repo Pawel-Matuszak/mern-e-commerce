@@ -11,6 +11,7 @@ const NavDropdown = (props) => {
       <ul className='navbar-dropdown'>
         <li className="dropdown-item dropdown-exit" onClick={()=>setOpen(false)}><SVGclose/></li>
         {props.children}
+        <div className="cover" onClick={()=>setOpen(false)}></div>
       </ul>}
     </div>
   )
