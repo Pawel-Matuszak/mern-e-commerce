@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <div className='navbar'>
-      <ul className='navbar-list'>
-        <li>home</li>
-        <li>catalog</li>
-        <li>contact</li>
-      </ul>
-      <div className="cart">cart</div>
-    </div>
+    <nav className='navbar'>
+      <div className="navbar-content">
+        {props.children}
+      </div>
+    </nav>
   )
 };
+
+
+
 
 export default Navbar;
