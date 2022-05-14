@@ -1,4 +1,5 @@
 import React from 'react'
+import CartItem from './CartItem'
 
 const Cart = () => {
   return (
@@ -14,26 +15,17 @@ const Cart = () => {
         </div>
         <div className="items">
           
-          <div className="item">
-            
-            <div className="details-1">
-              <img src="" alt="" width={88} height={88}/>
-              <div className="img-desc">
-                <div className="title">berd hat</div>
-                <button className="remove-item-btn">remove</button>
-              </div>
-            </div>
-
-            <div className="details-2">
-              <input type="number" min={0} max={10} className="qty" />
-              <div className="price">$22.22</div>
-            </div>
-          </div>
+        <CartItem name="berd hat" qty="1" maxQty="5" price={9999}/>
         
         </div>
         <div className="summary">
           <div className="label">subtotal</div>
           <div className="label price">$22.22</div>
+        </div>
+        <div className="check-out">
+          <p>shipping, taxes, and discounts codes calculated <br/> at checkout.</p>
+          <button>update cart</button>
+          <button>check out</button>
         </div>
       </div>
     </div>

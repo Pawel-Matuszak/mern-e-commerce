@@ -20,7 +20,6 @@
 
     .items{
       margin: 1rem 0;
-      padding: 2rem 0;
       border-top: 1px solid $border-color;
       border-bottom: 1px solid $border-color;
     }
@@ -41,10 +40,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 30px 0;
 
       .remove-item-btn{
          padding: 8px 15px;
-         background: #fff;
+         background: none;
          border: 1px solid $border-color;
       }
 
@@ -55,11 +55,23 @@
         width: 80px;
         height: 41px;
         border: 1px solid $border-color;
+        background: none;
+        
       }
 
       input[type=number]:focus{
         outline: none;
         border: 1px solid rgb(153, 153, 153);
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance: textfield;
       }
 
       .details-1{
@@ -75,6 +87,31 @@
         @extend %cart-grid;
         width: 30vw;
         max-width: 400px;
+        line-height: 41px;
+        text-align: center;
+
+        .qty-counter-wrapper{
+          position: relative;
+
+
+          .qty-btn{
+            position: absolute;
+            top:1px;
+            right: 1px;
+            user-select: none;
+            cursor: pointer;
+            padding: 0 10px;
+            height: 19px;
+            line-height: 19px;
+            background: #F1F1F1;
+            width: 25px;
+            text-align: center;
+          }
+
+          .dec-btn{
+            transform: translateY(100%);
+          }
+        }
       }
     }
 
@@ -85,6 +122,32 @@
 
       .label{
         font-weight: 700;
+      }
+    }
+
+    .check-out{
+      justify-self: flex-end;
+      text-align: right;
+
+      p{
+        font-size: 1rem;
+        margin: 15px 0;
+      }
+
+      button{
+        font-size: 1.1rem;
+        font-weight: 700;
+        font-family: "Comic Sans MS";
+        border: none;
+        outline: none;
+        background: #FF0000;
+        color: #fff;
+        padding: .7rem 1.2rem;
+        margin-left: 20px;
+      }
+
+      button:hover{
+        cursor: pointer;
       }
     }
 
