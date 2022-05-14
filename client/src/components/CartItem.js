@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
+import { ReactComponent as Caret } from '../images/caret-down-solid.svg';
 
 const CartItem = ({url, name, qty, maxQty, price}) => {
 
   const [qtyVal, setQtyVal] = useState(qty);
 
   const setValidQty = (value) =>{
-    setQtyVal(parseInt(qtyVal)+value);
+    let newQty = parseInt(qtyVal)+parseInt(value);
+    if(newQty==0 || newQty>maxQty) return;
+    setQtyVal(newQty);
   }
 
   return (
@@ -22,8 +25,8 @@ const CartItem = ({url, name, qty, maxQty, price}) => {
     <div className="details-2">
       <span className="qty-counter-wrapper">
         <input type="number" min={0} max={maxQty} className="qty" value={qtyVal}/>
-        <span className="inc-btn qty-btn" onClick={()=>setValidQty(1)}>+</span>
-        <span className="dec-btn qty-btn" onClick={()=>setValidQty(-1)}>-</span>
+        <span className="inc-btn qty-btn" onClick={()=>setValidQty(1)}><Caret/></span>
+        <span className="dec-btn qty-btn" onClick={()=>setValidQty(-1)}><Caret/></span>
       </span>
       <div className="price">${price/100}</div>
     </div>

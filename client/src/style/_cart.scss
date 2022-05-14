@@ -28,6 +28,7 @@
       @extend %cart-grid;
       width: 30vw;
       max-width: 400px;
+      font-size: 1.1rem;
 
       .label{
         font-family: 'Archivo Narrow', sans-serif;
@@ -96,20 +97,33 @@
 
           .qty-btn{
             position: absolute;
-            top:1px;
-            right: 1px;
+            right: 5px;
+            background: #F1F1F1;
             user-select: none;
             cursor: pointer;
-            padding: 0 10px;
-            height: 19px;
-            line-height: 19px;
-            background: #F1F1F1;
-            width: 25px;
-            text-align: center;
+            height: 15px;
+            width: 18px;
+
+            svg{
+              position: absolute;
+              top:50%;
+              left:50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .qty-btn:hover{
+            background: $bg-color-hover;
+          }
+
+          .inc-btn{
+            transform: rotate(180deg);
+            top: 5px;
           }
 
           .dec-btn{
             transform: translateY(100%);
+            bottom: 20px;
           }
         }
       }
