@@ -6,4 +6,27 @@
   align-items: center;
   height: 20vh;
   margin: 20px;
+
+  .items-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    max-width: 1200px;
+    width: 70vw;
+
+
+    .header{
+      @extend %cart-grid;
+      width: 30vw;
+
+    }
+
+    .summary{
+      @extend %cart-grid;
+      width: 20vw;
+
+    }
+
+  }
+
 }
