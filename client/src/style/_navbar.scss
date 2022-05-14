@@ -30,7 +30,7 @@
     width: 300px;
     height: 100vh;
     padding: 30px;
-    background: rgb(255, 255, 255);
+    background: $bg-color;
     z-index: 99;
 
     
@@ -50,7 +50,7 @@
     }
 
     .dropdown-item:active{
-      background: rgb(235, 235, 235);
+      background: $bg-color-hover;
     }
 
     .dropdown-exit{
@@ -70,13 +70,14 @@
     }
 
     .dropdown-exit:active{
-      background: rgb(235, 235, 235);
+      background: $bg-color-hover;
     }
   }
 
   
 
   .cart img{
+    margin-left: -50px;
     width: 73px;
     height: 45px;
   }
@@ -88,6 +89,6 @@
   left:300px;
   width: 150vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.418);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 9;
 }

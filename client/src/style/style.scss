@@ -1,12 +1,18 @@
 @import "_variables.scss";
 @import "_navbar.scss";
 @import "_product.scss";
-@import "catalog.scss";
+@import "_cart.scss";
+@import "_catalog.scss";
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: $font-color;
 }
 
 ul, li{
@@ -19,5 +25,5 @@ body{
   font-family: $default-font;
   background-color: $bg-color;
   overflow-x: hidden;
-
+  color: $font-color;
 }

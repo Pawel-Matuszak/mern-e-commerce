@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {addItem} from "./actions/itemActions"
 import Navbar from './components/Navbar';
 import Catalog from './components/Catalog';
+import Cart from './components/Cart';
 import NavDropdown from "./components/NavDropdown"
 import NavItem from "./components/NavItem"
 import {ReactComponent as SVGdropdown} from "./images/svgexport-2.svg";
@@ -35,7 +36,8 @@ const App = () => {
         <NavItem className="title" src={TitleImg}/>
         <NavItem className="cart" src={CartImg}/>
       </Navbar>
-      <Catalog/>
+      {/* <Catalog/> */}
+      <Cart/>
     </div>
   )
 };
