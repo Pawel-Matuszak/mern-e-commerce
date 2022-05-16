@@ -1,5 +1,6 @@
 import React from 'react'
-import LogoImg from "../images/black_logo_130x.webp"
+import LogoImg from "../images/black_logo_130x.webp";
+import {ReactComponent as EnvelopeSvg} from "../images/svgexport-5.svg";
 
 const Footer = () => {
   return (
@@ -35,8 +36,14 @@ const Footer = () => {
         
         <div className="grid-item">
           <div className="footer-title">join our newsletter</div>
-          <p>get notifications about new arrivals<br/> and restocked items!</p>
-          <input type="text" />
+          <p>get notifications about new arrivals and restocked items!</p>
+
+          <div className="newsletter">
+            <input type="text"/>
+            <button type="submit">
+              <EnvelopeSvg/>
+            </button>
+          </div>
         </div>
         
         <div className="grid-item">
