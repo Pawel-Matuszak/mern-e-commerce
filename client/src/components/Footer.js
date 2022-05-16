@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import LogoImg from "../images/black_logo_130x.webp";
 import {ReactComponent as EnvelopeSvg} from "../images/svgexport-5.svg";
+import {ReactComponent as CaretSvg} from "../images/caret-down-solid.svg";
 
 const Footer = () => {
 
@@ -84,7 +85,7 @@ const FooterGridItem = (props) => {
 
   return (
     <div className="grid-item">
-      <div className="mobile-dropdown" onClick={()=>setOpen(!open)}>^</div>
+      <div className="mobile-dropdown" onClick={()=>setOpen(!open)}><CaretSvg className={`${(open) ? 'rotate' : ''}`}/></div>
       <div className="footer-title">{props.title}</div>
 
       <div className={`mobile-content ${(open) ? 'show-mobile-content' : 'hide-mobile-content'}`}>{props.children}</div>
