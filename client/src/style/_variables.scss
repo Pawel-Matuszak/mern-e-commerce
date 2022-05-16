@@ -1,9 +1,11 @@
 $bg-color: rgb(255, 255, 255);
+$footer-bg-color: rgb(240, 240, 240);
 $bg-color-hover: rgb(235, 235, 235);
 $border-color: rgb(209, 209, 209);
 $font-color: rgb(70, 70, 70);;
 $default-font-size: 1.2rem;
 $default-font: "Montserrat";
+$default-font-2:"Comic Sans MS";
 
 $laptop-width: 1024px;
 $tablet-width: 768px;
@@ -22,4 +24,9 @@ $mobile-width: 480px;
   justify-self: flex-end;
   display: flex;
   justify-content: space-between;
+}
+
+%input-focus{
+  outline: none;
+  border: 1px solid rgb(153, 153, 153);
 }

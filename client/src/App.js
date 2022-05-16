@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import { useDispatch, useSelector } from 'react-redux';
 import {addItem} from "./actions/itemActions"
-import Navbar from './components/Navbar';
-import Catalog from './components/Catalog';
-import Cart from './components/Cart';
-import NavDropdown from "./components/NavDropdown"
-import NavItem from "./components/NavItem"
 import {ReactComponent as SVGdropdown} from "./images/svgexport-2.svg";
 import CartImg from "./images/checkout_small.webp";
 import TitleImg from "./images/black_logo_130x.webp";
 import CatalogImg from "./images/catalog.webp";
 import HomeImg from "./images/home.webp";
+import Navbar from './components/Navbar';
+import Catalog from './components/Catalog';
+import Cart from './components/Cart';
+import NavDropdown from "./components/NavDropdown"
+import NavItem from "./components/NavItem"
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -38,6 +39,7 @@ const App = () => {
       </Navbar>
       {/* <Catalog/> */}
       <Cart/>
+      <Footer/>
     </div>
   )
 };
