@@ -38,7 +38,7 @@ const Footer = () => {
           <p>get notifications about new arrivals and restocked items!</p>
 
           <div className="newsletter">
-            <input type="text"/>
+            <input type="text" placeholder='enter your email'/>
             <button type="submit">
               <EnvelopeSvg/>
             </button>
