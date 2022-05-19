@@ -1,5 +1,5 @@
 .navbar{
-  @extend %box-shadow;
+  border-bottom: 1px solid $border-color;
   
   &-content{
     display: flex;

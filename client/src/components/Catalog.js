@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Product from './Product';
 import { addItem, getItems } from '../actions/itemActions';
+import BuyThatOneGif from "../images/buythatone_3.gif"
 
 const ProductsList = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,9 @@ const ProductsList = () => {
         {items.map(item => (
           <Product key={item._id} itemDetails={item} />
         ))}
+        <div className="buythatone">
+          <img src={BuyThatOneGif} alt="buythatone" />
+        </div>
       </div>
 
       {/* <button onClick={()=>dispatch(addItem({name: "berd-shoes", price: 999, url: "shoe-berd"}))}>dodaj</button> */}

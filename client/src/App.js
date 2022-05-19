@@ -13,6 +13,7 @@ import Cart from './components/Cart';
 import NavDropdown from "./components/NavDropdown"
 import NavItem from "./components/NavItem"
 import Footer from './components/Footer';
+import Home from "./components/Home";
 
 const App = () => {
 
@@ -37,7 +38,8 @@ const App = () => {
         <NavItem className="title" src={TitleImg}/>
         <NavItem className="cart" src={CartImg}/>
       </Navbar>
-      <Catalog/>
+      <Home/>
+      {/* <Catalog/> */}
       {/* <Cart/> */}
       <Footer/>
     </div>
