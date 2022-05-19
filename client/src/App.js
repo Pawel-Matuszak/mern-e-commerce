@@ -37,8 +37,8 @@ const App = () => {
         <NavItem className="title" src={TitleImg}/>
         <NavItem className="cart" src={CartImg}/>
       </Navbar>
-      {/* <Catalog/> */}
-      <Cart/>
+      <Catalog/>
+      {/* <Cart/> */}
       <Footer/>
     </div>
   )

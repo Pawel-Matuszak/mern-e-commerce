@@ -13,6 +13,8 @@ const ProductsList = () => {
 
   return (
     <div className='catalog'>
+      <marquee>merch available for limited time only buy my stuff now plz</marquee>
+      <h2>catalog</h2>
       <div className="catalog-content">
         {items.map(item => (
           <Product key={item._id} itemDetails={item} />

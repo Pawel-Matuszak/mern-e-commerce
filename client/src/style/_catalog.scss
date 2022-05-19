@@ -1,4 +1,16 @@
 .catalog{
+  padding: 60px 0;
+  font-family: $default-font-2;
+
+  marquee{
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    font-weight: 400;
+  }
+
+  h2{
+    text-align: center;
+  }
 
   &-content{
     display: grid;

@@ -28,6 +28,7 @@ const CartItem = ({url, name, qty, maxQty, price}) => {
         <span className="inc-btn qty-btn" onClick={()=>setValidQty(1)}><Caret/></span>
         <span className="dec-btn qty-btn" onClick={()=>setValidQty(-1)}><Caret/></span>
       </span>
+      <button className="remove-item-btn remove-item-btn-mobile">remove</button>
       <div className="price">${price/100}</div>
     </div>
   </div>

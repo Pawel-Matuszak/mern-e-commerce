@@ -1,5 +1,6 @@
 import React from 'react'
 import CartItem from './CartItem'
+import GreetingImg from "../images/greeting_1.gif"
 
 const Cart = () => {
   return (
@@ -15,18 +16,30 @@ const Cart = () => {
         </div>
         <div className="items">
           
-        <CartItem name="berd hat" qty="1" maxQty="5" price={9999}/>
-        
+          <CartItem name="berd hat" qty="1" maxQty="5" price={9999}/>
+          <CartItem name="berd hat" qty="1" maxQty="5" price={9999}/>
+
         </div>
-        <div className="summary">
-          <div className="label">subtotal</div>
-          <div className="label price">$22.22</div>
+
+
+        <div className="cart-bottom-section">
+          <img src={GreetingImg} alt="" />
+
+          <div className="summary-wrap">
+            <div className="summary">
+              <div className="label">subtotal</div>
+              <div className="label price">$22.22</div>
+            </div>
+            <div className="check-out">
+              <p>shipping, taxes, and discounts codes calculated at checkout.</p>
+              <button>update cart</button>
+              <button>check out</button>
+            </div>
+          </div>
         </div>
-        <div className="check-out">
-          <p>shipping, taxes, and discounts codes calculated <br/> at checkout.</p>
-          <button>update cart</button>
-          <button>check out</button>
-        </div>
+
+
+
       </div>
     </div>
   )

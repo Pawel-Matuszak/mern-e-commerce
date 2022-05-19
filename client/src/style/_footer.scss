@@ -11,6 +11,8 @@
     padding: 100px 0;
     max-width: 1400px;
     margin: auto;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 
     .logo-div-mobile, .mobile-dropdown{
       display:none;
@@ -41,7 +43,6 @@
         height: 40px;
         text-align: right;
         cursor: pointer;
-        user-select: none;
 
         svg{
           position: absolute;

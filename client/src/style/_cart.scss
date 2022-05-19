@@ -47,7 +47,9 @@
          padding: 8px 15px;
          background: none;
          border: 1px solid $border-color;
+         cursor: pointer;
       }
+      
 
       input[type=number]{
         font-family: "Comic Sans MS";
@@ -90,11 +92,23 @@
         line-height: 41px;
         text-align: center;
 
+        .remove-item-btn-mobile{
+          display: none;
+          background-color: $btn-red;
+          color: #fff;
+          padding: 7px 25px;
+          height: min-content;
+        }
+
+        .qty-counter-wrapper:hover .qty-btn{
+          display: block;
+        }
+
         .qty-counter-wrapper{
           position: relative;
 
-
           .qty-btn{
+            display: none;
             position: absolute;
             right: 5px;
             background: #F1F1F1;
@@ -128,42 +142,120 @@
       }
     }
 
-    .summary{
-      @extend %cart-grid;
-      width: 20vw;
-      max-width: 300px;
+    .cart-bottom-section{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
 
-      .label{
-        font-weight: 700;
+    .summary-wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .summary{
+        @extend %cart-grid;
+        width: 20vw;
+        max-width: 300px;
+
+        .label{
+          font-weight: 700;
+        }
+      }
+  
+      .check-out{
+        justify-self: flex-end;
+        text-align: right;
+  
+        p{
+          font-size: 1rem;
+          margin: 15px 0;
+        }
+  
+        button{
+          font-size: 1.1rem;
+          font-weight: 700;
+          font-family: "Comic Sans MS";
+          border: none;
+          outline: none;
+          background: $btn-red;
+          color: #fff;
+          padding: .7rem 1.2rem;
+          margin-left: 20px;
+        }
+  
+        button:hover{
+          cursor: pointer;
+        }
       }
     }
 
-    .check-out{
-      justify-self: flex-end;
-      text-align: right;
-
-      p{
-        font-size: 1rem;
-        margin: 15px 0;
-      }
-
-      button{
-        font-size: 1.1rem;
-        font-weight: 700;
-        font-family: "Comic Sans MS";
-        border: none;
-        outline: none;
-        background: #FF0000;
-        color: #fff;
-        padding: .7rem 1.2rem;
-        margin-left: 20px;
-      }
-
-      button:hover{
-        cursor: pointer;
-      }
-    }
 
   }
 
+}
+
+@media screen and (max-width: $tablet-width) {
+  .container .cart-container .items-grid{
+    
+
+    .header{
+      display: none;
+    }
+
+    .items{
+      border-top: none;
+      
+      .remove-item-btn{
+        display: none;
+      }
+
+      .item{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        width: 100%;
+        
+        .details-2{
+          width: 100%;
+          max-width: none;
+          align-items: center;
+          margin-top: 10px;
+        }
+      }
+
+
+      .item .details-2 .remove-item-btn-mobile{
+        display: block;
+      }
+    }
+
+    .cart-bottom-section{
+      flex-direction: column;
+
+      img{
+        width: 400px;
+        margin: 20px 0;
+
+        @media screen and (max-width: 400px){
+          width: 80%;
+        } 
+      }
+    }
+
+    .summary-wrap{
+      align-items: center;
+    }
+
+    .summary{
+      width: 100%;
+      max-width: none;
+      justify-content: space-around;
+    }
+
+    .check-out{
+      justify-self: center;
+      text-align: center;
+    }
+  }
 }
