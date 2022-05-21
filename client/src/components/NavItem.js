@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const NavItem = (props) => {
   return (
     <li className={props.className} >
-      <a href="">{props.children}
+      <Link to={props.link}>{props.children}
         <img src={props.src} alt={props.src} />      
-      </a>
+      </Link>
     </li>
   )
 }

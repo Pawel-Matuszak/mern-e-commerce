@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import axios from "axios";
 import { useDispatch, useSelector } from 'react-redux';
 import {addItem} from "./actions/itemActions"
@@ -16,7 +17,6 @@ import Footer from './components/Footer';
 import Home from "./components/Home";
 
 const App = () => {
-
  
   // const addToDb = ()=>{
   //   axios.post("/products", {
@@ -29,20 +29,25 @@ const App = () => {
   // }
   
   return (
-    <div className='container'>
-      <Navbar>
-        <NavDropdown icon={<SVGdropdown/>}>
-          <NavItem className="dropdown-item" src={HomeImg}></NavItem>
-          <NavItem className="dropdown-item" src={CatalogImg}></NavItem>
-        </NavDropdown>
-        <NavItem className="title" src={TitleImg}/>
-        <NavItem className="cart" src={CartImg}/>
-      </Navbar>
-      <Home/>
-      {/* <Catalog/> */}
-      {/* <Cart/> */}
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className='container'>
+        <Navbar>
+          <NavDropdown icon={<SVGdropdown/>}>
+            <NavItem className="dropdown-item" src={HomeImg} link="/"></NavItem>
+            <NavItem className="dropdown-item" src={CatalogImg} link="/catalog"></NavItem>
+          </NavDropdown>
+          <NavItem className="title" src={TitleImg} link="/"/>
+          <NavItem className="cart" src={CartImg} link="/cart"/>
+        </Navbar>
+        <Routes>
+          <Route index element={<Home/>}/>
+          <Route path="catalog" element={<Catalog/>}/>
+          <Route path="cart" element={<Cart/>}/>
+          <Route path="*" element={<Cart/>}/>
+        </Routes>
+        <Footer/>
+      </div>
+    </BrowserRouter>
   )
 };
 
