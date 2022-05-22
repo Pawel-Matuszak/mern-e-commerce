@@ -15,6 +15,7 @@ import NavDropdown from "./components/NavDropdown"
 import NavItem from "./components/NavItem"
 import Footer from './components/Footer';
 import Home from "./components/Home";
+import PageNotFound from './components/PageNotFound';
 
 const App = () => {
  
@@ -43,7 +44,7 @@ const App = () => {
           <Route index element={<Home/>}/>
           <Route path="catalog" element={<Catalog/>}/>
           <Route path="cart" element={<Cart/>}/>
-          <Route path="*" element={<Cart/>}/>
+          <Route path="*" element={<PageNotFound/>}/>
         </Routes>
         <Footer/>
       </div>
