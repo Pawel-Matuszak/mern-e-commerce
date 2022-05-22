@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import LogoImg from "../images/black_logo_130x.webp";
 import {ReactComponent as EnvelopeSvg} from "../images/svgexport-5.svg";
 import {ReactComponent as CaretSvg} from "../images/caret-down-solid.svg";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -52,7 +53,7 @@ const Footer = () => {
             box number 8249 <br/>
             hermitage, tn 37076-9998 <br/>
           </p>
-          <p>customersupport@warrenjames.org</p>
+          <a className="animated-link link-238">customersupport@warrenjames.org</a>
         </FooterGridItem>
 
         <div className="grid-item logo-div-mobile">

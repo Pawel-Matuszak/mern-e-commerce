@@ -27,3 +27,11 @@ $mobile-width: 480px;
   outline: none;
   border: 1px solid rgb(153, 153, 153);
 }
+
+$widths: (238, 157, 50);
+
+@each $width in $widths {
+  .link-#{$width}:hover:after {
+    width: #{$width}px;
+  }
+}

@@ -21,7 +21,26 @@ a{
 }
 
 .animated-link{
-  border-bottom: 3px solid rgb(236, 236, 236);
+  border-bottom: 3px solid rgb(225, 225, 225);
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  width: fit-content;
+
+}
+
+.animated-link::after{
+  content: "";
+  display: block;
+  position: relative;
+  top:3px;
+  left:0;
+  width: 0;
+  border-bottom: 3px solid rgb(124, 124, 124);
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
 }
 
 ul, li{

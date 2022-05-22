@@ -6,7 +6,7 @@ const PageNotFound = () => {
     <div className='container-404'>
       <h1>404 page not found</h1>
       <p>the page you were looking for does not exist.</p>
-      <Link className="animated-link" to="/catalog">continue shopping</Link>
+      <a className="animated-link link-157">continue shopping</a>
     </div>
   )
 }
