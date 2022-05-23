@@ -6,6 +6,7 @@ import GreetingGif from "../images/greeting_2.gif"
 import BuyThatOneGif from "../images/buythatone_3.gif"
 import ShopNowGif from "../images/shop_now.gif"
 import Product from './Product';
+import {motion} from "framer-motion"
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Home = () => {
 
   return (
     <div className='main'>
-      <img className="banner" src={BannerSrc} alt="banner" />
+      <motion.img animate={{filter: "brightness(1)"}} transition={{duration: 1}} className="banner" src={BannerSrc} alt="banner" />
       <img className="greeting" src={GreetingGif} alt="greeting" />
 
       <div className="main-content">
