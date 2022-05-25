@@ -1,6 +1,6 @@
 import React from 'react'
 import CartItem from './CartItem'
-import GreetingImg from "../images/greeting_1.gif"
+import GreetingImg from "../../images/greeting_1.gif"
 
 const Cart = () => {
   return (

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import LogoImg from "../images/black_logo_130x.webp";
-import {ReactComponent as EnvelopeSvg} from "../images/svgexport-5.svg";
-import {ReactComponent as CaretSvg} from "../images/caret-down-solid.svg";
-import { Link } from 'react-router-dom';
+import LogoImg from "../../images/black_logo_130x.webp";
+import {ReactComponent as EnvelopeSvg} from "../../images/svgexport-5.svg";
+import {ReactComponent as CaretSvg} from "../../images/caret-down-solid.svg";
 
 const Footer = () => {
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ReactComponent as Caret } from '../images/caret-down-solid.svg';
+import { ReactComponent as Caret } from '../../images/caret-down-solid.svg';
 
 const CartItem = ({url, name, qty, maxQty, price}) => {
 

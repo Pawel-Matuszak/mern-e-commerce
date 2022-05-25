@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Product from './Product';
-import { addItem, getItems } from '../actions/itemActions';
-import BuyThatOneGif from "../images/buythatone_3.gif"
+import { addItem, getItems } from '../../actions/itemActions';
+import BuyThatOneGif from "../../images/buythatone_3.gif"
 
 const ProductsList = () => {
   const dispatch = useDispatch();

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {ReactComponent as SVGclose} from "../images/svgexport-1.svg";
+import {ReactComponent as SVGclose} from "../../images/svgexport-1.svg";
 import { motion } from "framer-motion";
 
 const NavDropdown = (props) => {

@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getItems } from '../actions/itemActions';
-import BannerSrc from "../images/banner_1080x.webp";
-import GreetingGif from "../images/greeting_2.gif"
-import BuyThatOneGif from "../images/buythatone_3.gif"
-import ShopNowGif from "../images/shop_now.gif"
-import Product from './Product';
+import { getItems } from '../../actions/itemActions';
+import BannerSrc from "../../images/banner_1080x.webp";
+import GreetingGif from "../../images/greeting_2.gif"
+import BuyThatOneGif from "../../images/buythatone_3.gif"
+import ShopNowGif from "../../images/shop_now.gif"
+import Product from '../Catalog/Product';
 import {motion} from "framer-motion"
 
 const Home = () => {
