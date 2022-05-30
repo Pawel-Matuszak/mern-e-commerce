@@ -17,11 +17,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='main'>
+    <main className='main'>
       <motion.img animate={{filter: "brightness(1)"}} transition={{duration: 1}} className="banner" src={BannerSrc} alt="banner" />
       <img className="greeting" src={GreetingGif} alt="greeting" />
 
-      <div className="main-content">
+      <section className="main-content">
         <h2>featured collection</h2>
         <a href=""><img src={ShopNowGif} alt=""/></a>
         <div className="items">
@@ -31,8 +31,8 @@ const Home = () => {
           ))}
         </div>
         <img src={BuyThatOneGif} alt="" className="buythatone"/>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
 
