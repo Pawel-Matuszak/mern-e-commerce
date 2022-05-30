@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6cbafc81.css",
+    "main.js": "/static/js/main.12be1458.js",
+    "static/media/greeting_2.gif": "/static/media/greeting_2.682dbcfdaa5e66d82660.gif",
+    "static/media/greeting_1.gif": "/static/media/greeting_1.6e1555507fcb74e7f4ee.gif",
+    "static/media/shop_now.gif": "/static/media/shop_now.adc060c959b828737300.gif",
+    "static/media/buythatone_3.gif": "/static/media/buythatone_3.6e99ce2c03b288c7d10b.gif",
+    "static/media/home.webp": "/static/media/home.c840ec207916582c4b06.webp",
+    "static/media/banner_1080x.webp": "/static/media/banner_1080x.dc5fa94c2c6d175cfddc.webp",
+    "static/media/catalog.webp": "/static/media/catalog.882b10dfa8d2777f8f43.webp",
+    "static/media/checkout_small.webp": "/static/media/checkout_small.579efc3c0fcf9fb98a5f.webp",
+    "static/media/black_logo_130x.webp": "/static/media/black_logo_130x.ac686c7043974a2921aa.webp",
+    "index.html": "/index.html",
+    "static/media/caret-down-solid.svg": "/static/media/caret-down-solid.59c78c8b0df3c0b006f04942b58a3552.svg",
+    "static/media/svgexport-5.svg": "/static/media/svgexport-5.f22e2e002bc1022f676ae0719248c71d.svg",
+    "static/media/svgexport-1.svg": "/static/media/svgexport-1.48559b25cb4573eed0ae4da3642542a4.svg",
+    "static/media/svgexport-2.svg": "/static/media/svgexport-2.75b4a8dbb428d7066a5bb9874c6f67fe.svg",
+    "main.6cbafc81.css.map": "/static/css/main.6cbafc81.css.map",
+    "main.12be1458.js.map": "/static/js/main.12be1458.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cbafc81.css",
+    "static/js/main.12be1458.js"
+  ]
+}

@@ -23,7 +23,7 @@ const Home = () => {
 
       <section className="main-content">
         <h2>featured collection</h2>
-        <a href=""><img src={ShopNowGif} alt=""/></a>
+        <Link to="/catalog"><img src={ShopNowGif} alt=""/></Link>
         <div className="items">
           {items.map((item, i)=>(
             i<4 && <Product key={item._id} itemDetails={item} />
