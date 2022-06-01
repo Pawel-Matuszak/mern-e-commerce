@@ -27,7 +27,7 @@ const Cart = () => {
           </div>
           <div className="items">
             {cartItems.map(e=>(
-              <CartItem key={e._id} id={e._id} name={e.name} qty={e.qty} maxQty={e.maxQty} price={e.price}/>
+              <CartItem key={e._id} id={e._id} name={e.name} qty={e.qty} maxQty={e.maxQty} price={e.price} url={e.url}/>
             ))}
           </div>
           <div className="cart-bottom-section">

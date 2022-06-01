@@ -36,15 +36,13 @@ const CartItem = ({id, url, name, qty, maxQty, price}) => {
 
   return (
     <div className="item">
-            
     <div className="details-1">
-      <img src={url} alt="" width={88} height={88}/>
+      <img src={`res/${url}.jpg`} alt={name} width={88} height={88}/>
       <div className="img-desc">
         <div className="title">{name}</div>
         <button className="remove-item-btn" onClick={removeCart(id)}>remove</button>
       </div>
     </div>
-
     <div className="details-2">
       <span className="qty-counter-wrapper">
         <input type="number" min={0} max={maxQty} className="qty" value={qtyVal} readOnly/>
