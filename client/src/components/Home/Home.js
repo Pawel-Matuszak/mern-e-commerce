@@ -7,6 +7,7 @@ import BuyThatOneGif from "../../images/buythatone_3.gif"
 import ShopNowGif from "../../images/shop_now.gif"
 import Product from '../Catalog/Product';
 import {motion} from "framer-motion"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const Home = () => {
 
       <section className="main-content">
         <h2>featured collection</h2>
-        <a href=""><img src={ShopNowGif} alt=""/></a>
+        <Link to="/catalog"><img src={ShopNowGif} alt=""/></Link>
         <div className="items">
           {items.map((item, i)=>(
             i<4 && <Product key={item._id} itemDetails={item} />

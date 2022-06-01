@@ -19,16 +19,6 @@ import PageNotFound from './components/PageNotFound/PageNotFound';
 
 const App = () => {
  
-  // const addToDb = ()=>{
-  //   axios.post("/products", {
-  //     name: "berd hoodie",
-  //     price: 12999,
-  //     url: "./res/berd-hoodie"
-  //   }).then((res)=>{
-  //     console.log(res);
-  //   })
-  // }
-  
   return (
     <BrowserRouter>
       <div className='container'>
