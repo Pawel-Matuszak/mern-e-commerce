@@ -1,6 +1,4 @@
-const initialState = [
-  {_id: 12313123, name: "aaa", price: 1233, url: "qweqe", qty: 1, maxQty: 10},
-];
+const initialState = [];
 
 const cartReducer = (state=initialState, action) =>{
   switch (action.type) {
@@ -9,9 +7,10 @@ const cartReducer = (state=initialState, action) =>{
     
     case "ADD_CART_ITEM":
       //if item is already in cart increace qty by one
-      if(state.find(e=>e._id === action.payload._id)){
+      let exisits = state.find(e=>e._id === action.payload._id)
+      if(exisits){
         return state.map(e=>{
-          if(e=>e._id === action.payload._id){
+          if(e._id === action.payload._id){
             if(e.qty>=1){
               if(e.maxQty<=e.qty) return e;
               e.qty++
@@ -24,8 +23,17 @@ const cartReducer = (state=initialState, action) =>{
       }
       return [...state, action.payload];
 
+    case "DECREMENT_QTY":
+      return state.map(e=>{
+        if(e._id === action.payload){
+          if(e.qty<=1) return e;
+          e.qty--
+        }
+        return e;
+      })
+
     case "REMOVE_CART_ITEM":
-      return state.filter((e)=>e._id!==action.payload._id);
+      return state.filter((e)=>e._id!==action.payload);
 
     default:
       return state;

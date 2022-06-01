@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addCartItem } from '../../actions/cartActions';
+import { addCartItem, decCartItem, removeCartItem } from '../../actions/cartActions';
 
 const Product = ({itemDetails}) => {
 
@@ -16,12 +16,30 @@ const Product = ({itemDetails}) => {
       console.log(cartItems)
     }
   }
+
+  const decCart = (id) => {
+    return () => {
+      dispatch(decCartItem(id))
+      console.log(cartItems)
+    }
+  }
+
+  const removeCart = (id) => {
+    return () => {
+      dispatch(removeCartItem(id));
+      console.log(cartItems);
+    }
+  }
+
+
   return (
     <div className='product'>
       <img src={`${process.env.PUBLIC_URL}/res/${itemDetails.url}.jpg`}alt={itemDetails.url} />
       <div className="product-name">{itemDetails.name}</div>
       <div className="product-price">{itemDetails.price/100} USD</div>
-      <button onClick={addToCart(itemDetails)}>dadad</button>
+      <button onClick={addToCart(itemDetails)}>++++</button>
+      <button onClick={decCart(itemDetails._id)}>----</button>
+      <button onClick={removeCart(itemDetails._id)}>remove</button>
     </div>
   ) 
 };
