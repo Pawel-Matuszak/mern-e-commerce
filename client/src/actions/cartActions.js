@@ -1,9 +1,9 @@
-export const addCartItem = ({_id, name, price, url, maxQty}) => {
+export const addCartItem = ({_id, name, price, url, maxQty, qty}) => {
   //send to the server
   
   return {
     type: "ADD_CART_ITEM",
-    payload: {_id, name, price, url, maxQty}
+    payload: {_id, name, price, url, maxQty, qty}
   }
 }
 
