@@ -12,6 +12,11 @@ const ItemSchema = new Schema({
     min: 0,
   },
   url: String,
+  maxQty: {
+    type: Number,
+    required: true,
+    min: 1,
+  },
 })
 
 export default mongoose.model("Product", ItemSchema)
