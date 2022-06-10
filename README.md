@@ -1,3 +1,3 @@
 #  berd store - in progress
-Online store built with MERN stack.  
+Online store built with MERN stack. Website: afternoon-reef-22758.herokuapp.com/  
 Website design based on an existing site: https://hahahaimyourstorenow.com/
